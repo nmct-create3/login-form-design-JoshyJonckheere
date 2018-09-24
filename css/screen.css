@@ -2,6 +2,25 @@
 #FONTS
 \*------------------------------------*/
 
+@font-face { 
+    font-family: "Inter UI";
+    src: url("/fonts/Inter-UI-Regular.woff2") format("woff2"); 
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Inter UI";
+    src: url("/fonts/Inter-UI-Medium.woff2") format("woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Inter UI";
+    src: url("/fonts/Inter-UI-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+
+
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
@@ -23,14 +42,23 @@
 */
 
 html {
+    /* position */
+
+    /* box model */
+    box-sizing: border-box;
+
+    /* fonts */
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: grey;
-    box-sizing: border-box;
+    font-family: "Inter UI", "Impact";
+    color: #20223a;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+
+    /* appearance */
+    background-color: #F5F6FA;
+
+    /* other */
 }
 
 *,
@@ -53,7 +81,7 @@ html {
 }
 
 ::selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
@@ -158,18 +186,18 @@ hr {
 }
 
 a {
-    color: HotPink;
+    color: #3385FF;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: #0A1B33;
 }
 
 a:hover,
 a:focus {
-    color: DeepPink;
+    color: #1A4380;
 }
 
 /*------------------------------------*\
@@ -432,6 +460,32 @@ a:focus {
     Website main logo
 */
 
+.c-logo {
+    display: flex;
+    justify-content: center;
+
+    height: 24px;
+
+}
+
+.c-logo__symbol {
+    height: 100%;
+    display: block;
+}
+
+.logo-outer-circle {
+    fill: #1B4186;
+}
+
+.logo-inner-circle {
+    fill: #3385FF;
+}
+
+.logo-text{
+    fill: #20223A;
+}
+
+
 /*
     Component: Card
     ---
@@ -444,6 +498,11 @@ a:focus {
     Everything form related here
 */
 
+.c-form-field--option {
+    display: flex;
+    justify-content: flex-start;
+}
+
 /*
     Component: Input
     ---
@@ -451,7 +510,10 @@ a:focus {
 */
 
 .c-input {
-
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .c-input:focus {
@@ -464,7 +526,10 @@ a:focus {
 */
 
 .c-label {
+    display: block;
+}
 
+.label-inline {
 }
 
 /* If a input is focused within the form-field class change te color of the label */
