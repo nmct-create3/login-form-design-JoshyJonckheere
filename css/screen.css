@@ -613,11 +613,19 @@ label {
 */
 
 .c-button {
-
+    background: #3385FF;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #2E77E6;
+    border-radius: 3px;
+    color: white;
+    line-height: 24px;
+    padding: 12px;
+    width: 100%;
 }
 
 .c-button:hover {
-
+    
 }
 
 .c-button:focus {
